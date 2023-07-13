@@ -308,6 +308,7 @@
 &rpm_requests {
 	regulators {
 		compatible = "qcom,rpm-pm8953-regulators";
+
 		vdd_s1-supply = <&vph_pwr>;
 		vdd_s2-supply = <&vph_pwr>;
 		vdd_s3-supply = <&vph_pwr>;
@@ -320,105 +321,107 @@
 		vdd_l4_l5_l6_l7_l16_l19-supply = <&pm8953_s4>;
 		vdd_l8_l11_l12_l13_l14_l15-supply = <&vph_pwr>;
 		vdd_l9_l10_l17_l18_l22-supply = <&vph_pwr>;
+		vdd_l23-supply = <&pm8953_s3>;
 
 		pm8953_s1: s1 {
-						regulator-min-microvolt = <0xd4670>;
-						regulator-max-microvolt = <0x11a3a0>;
+			regulator-min-microvolt = <863000>;
+			regulator-max-microvolt = <1152000>;
 		};
 
 		pm8953_s3: s3 {
-						regulator-min-microvolt = <0x12b128>;
-						regulator-max-microvolt = <0x12b128>;
+			regulator-min-microvolt = <984000>;
+			regulator-max-microvolt = <1224000>;
 		};
 
 		pm8953_s4: s4 {
-						regulator-min-microvolt = <0x1cfde0>;
-						regulator-max-microvolt = <0x1f47d0>;
+			regulator-min-microvolt = <1896000>;
+			regulator-max-microvolt = <2048000>;
 		};
 
 		pm8953_l1: l1 {
-						regulator-min-microvolt = <0xf4240>;
-						regulator-max-microvolt = <0xf4240>;
+			regulator-min-microvolt = <1000000>;
+			regulator-max-microvolt = <1100000>;
 		};
 
 		pm8953_l2: l2 {
-						regulator-min-microvolt = <0xee098>;
-						regulator-max-microvolt = <0x12b128>;
+			regulator-min-microvolt = <975000>;
+			regulator-max-microvolt = <1225000>;
 		};
 
 		pm8953_l3: l3 {
-						regulator-min-microvolt = <0xe1d48>;
-						regulator-max-microvolt = <0xe1d48>;
+			regulator-min-microvolt = <925000>;
+			regulator-max-microvolt = <925000>;
+			regulator-allow-set-load;
 		};
 
 		pm8953_l5: l5 {
-						regulator-min-microvolt = <0x1b7740>;
-						regulator-max-microvolt = <0x1b7740>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
 		};
 
 		pm8953_l6: l6 {
-						regulator-min-microvolt = <0x1b7740>;
-						regulator-max-microvolt = <0x1b7740>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
 		};
 
 		pm8953_l7: l7 {
-						regulator-min-microvolt = <0x1b7740>;
-						regulator-max-microvolt = <0x1cfde0>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1900000>;
 		};
 
 		pm8953_l8: l8 {
-						regulator-min-microvolt = <0x2d0370>;
-						regulator-max-microvolt = <0x2d0370>;
+			regulator-min-microvolt = <2900000>;
+			regulator-max-microvolt = <2900000>;
 		};
 
 		pm8953_l9: l9 {
-						regulator-min-microvolt = <0x2dc6c0>;
-						regulator-max-microvolt = <0x325aa0>;
+			regulator-min-microvolt = <3000000>;
+			regulator-max-microvolt = <3300000>;
 		};
 
 		pm8953_l10: l10 {
-						regulator-min-microvolt = <0x2b7cd0>;
-						regulator-max-microvolt = <0x2b7cd0>;
+			regulator-min-microvolt = <2850000>;
+			regulator-max-microvolt = <2850000>;
 		};
 
 		pm8953_l11: l11 {
-						regulator-min-microvolt = <0x2d0370>;
-						regulator-max-microvolt = <0x2d0370>;
+			regulator-min-microvolt = <2950000>;
+			regulator-max-microvolt = <2950000>;
 		};
 
 		pm8953_l12: l12 {
-						regulator-min-microvolt = <0x1b7740>;
-						regulator-max-microvolt = <0x2d0370>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <2950000>;
 		};
 
 		pm8953_l13: l13 {
-						regulator-min-microvolt = <0x2faf08>;
-						regulator-max-microvolt = <0x2faf08>;
+			regulator-min-microvolt = <3125000>;
+			regulator-max-microvolt = <3125000>;
 		};
 
 		pm8953_l16: l16 {
-						regulator-min-microvolt = <0x1b7740>;
-						regulator-max-microvolt = <0x1b7740>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
 		};
 
 		pm8953_l17: l17 {
-						regulator-min-microvolt = <0x2b7cd0>;
-						regulator-max-microvolt = <0x2b7cd0>;
+			regulator-min-microvolt = <2750000>;
+			regulator-max-microvolt = <2850000>;
 		};
 
 		pm8953_l19: l19 {
-						regulator-min-microvolt = <0x124f80>;
-						regulator-max-microvolt = <0x149970>;
+			regulator-min-microvolt = <1200000>;
+			regulator-max-microvolt = <1350000>;
 		};
 
 		pm8953_l22: l22 {
-						regulator-min-microvolt = <0x2b7cd0>;
-						regulator-max-microvolt = <0x2ab980>;
+			regulator-min-microvolt = <2800000>;
+			regulator-max-microvolt = <2850000>;
 		};
 
 		pm8953_l23: l23 {
-						regulator-min-microvolt = <0xee098>;
-						regulator-max-microvolt = <0x12b128>;
+			regulator-min-microvolt = <975000>;
+			regulator-max-microvolt = <1225000>;
 		};
 	};
 };
